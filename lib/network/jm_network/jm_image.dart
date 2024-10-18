@@ -7,10 +7,21 @@ const imageUrls = [
   "https://cdn-msp3.jmapiproxy3.cc",
   "https://cdn-msp2.jmapiproxy4.cc",
   "https://cdn-msp2.jmapiproxy3.cc",
+  "https://cdn-msp.jmapiproxy1.cc",
+  "https://cdn-msp.jmapiproxy2.cc",
+  "https://cdn-msp2.jmapiproxy2.cc",
+  "https://cdn-msp3.jmapiproxy2.cc",
+  "https://cdn-msp.jmapinodeudzn.net",
+  "https://cdn-msp3.jmapinodeudzn.net",
 ];
 
 String getBaseUrl(){
-  return imageUrls[int.parse(appdata.settings[37])];
+  int index = int.parse(appdata.settings[37]);
+  if (index == 12) {
+    return appdata.settings[84];
+  } else {
+    return imageUrls[index];
+  }
 }
 
 String getJmCoverUrl(String id) {

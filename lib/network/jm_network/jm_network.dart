@@ -82,13 +82,25 @@ class JmNetwork {
   static JmNetwork? cache;
 
   static const urls = <String>[
-    "https://www.jmeadpoolcdn.one",
-    "https://www.jmeadpoolcdn.life",
-    "https://www.jmapiproxyxxx.one",
-    "https://www.jmfreedomproxy.xyz"
+    "https://www.18comic-hok.vip",
+    "https://www.18comic-16promax.club",
+    "https://www.18comic-doa.xyz",
+    "https://www.jmfreedomproxy.xyz",
+    "https://www.cdnxxx-proxy.vip",
+    "https://www.cdnxxx-proxy.org",
+    "https://www.cdnxxx-proxy.xyz",
+    "https://www.cdnxxx-proxy.co",
+    "https://www.cdnblackmyth.xyz"
   ];
 
-  String get baseUrl => urls[int.parse(appdata.settings[17])];
+  String get baseUrl {
+    int index = int.parse(appdata.settings[17]);
+    if (index == 9) {
+      return appdata.settings[56];
+    } else {
+      return urls[index];
+    }
+  }
 
   static const kJmSecret = '185Hcomic3PAPP7R';
 
