@@ -52,7 +52,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.github.wgh136.pica_comic"
+        applicationId "com.github.wgh136.pica_comic.fork"
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
         minSdkVersion 21
